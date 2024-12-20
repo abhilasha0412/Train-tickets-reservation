@@ -1,85 +1,89 @@
-// src/theme/frostedBliss.js
+// src/theme/railwayJourney.js
 import { createTheme } from '@mui/material/styles';
 
-const frostedBlissColors = {
-  base: '#0D1B2A',        // Deep midnight blue
-  surface: '#1D2A3A',     // Frosty dark blue
-  overlay: '#3E5C76',     // Soft steel blue
-  muted: '#A7BBC7',       // Frosty gray-blue
-  subtle: '#E4F0F6',      // Very light ice blue
-  text: '#F0F4F8',        // Soft white
-  love: '#FF4C61',        // Icy pink-red (for accents)
-  gold: '#F7B538',        // Frosted gold
-  rose: '#F55C8D',        // Light rose pink
-  pine: '#A7C7E7',        // Icy pine green
-  foam: '#A3D2CA',        // Gentle foam green
-  iris: '#5C84B1',        // Subtle iris blue
-  highlightLow: '#577F92',// Cool grayish blue for soft highlights
-  highlightMed: '#4C91A1',// Medium icy blue for stronger accents
-  highlightHigh: '#F06292',// Bold icy pink for high accents
+const railwayJourneyColors = {
+  base: '#2B2D42',        // Deep railway blue-gray
+  surface: '#3F4257',     // Dark steel gray
+  overlay: '#4E5166',     // Soft muted blue-gray
+  muted: '#8D99AE',       // Subtle gray-blue
+  subtle: '#EDF2F4',      // Light off-white
+  text: '#F8F9FA',        // Bright white
+  accent: '#EF233C',      // Railway red (accents like signage)
+  track: '#8C6D1F',       // Golden brown (for railway tracks)
+  sun: '#F9A826',         // Vibrant sunny yellow
+  green: '#4CAF50',       // Fresh green (for success messages)
+  infoBlue: '#3B82F6',    // Calm blue (informational highlights)
+  warningOrange: '#FF8C42', // Vibrant orange (warnings)
 };
 
-const frostedBlissTheme = createTheme({
+const railwayJourneyTheme = createTheme({
   MuiCssBaseline: {
     styleOverrides: `
-      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;600&display=swap');
     `,
   },
   palette: {
     mode: 'dark',
     background: {
-      default: frostedBlissColors.base,
-      paper: frostedBlissColors.surface,
+      default: railwayJourneyColors.base,
+      paper: railwayJourneyColors.surface,
     },
     primary: {
-      main: frostedBlissColors.pine,
+      main: railwayJourneyColors.track,
     },
     secondary: {
-      main: frostedBlissColors.foam,
+      main: railwayJourneyColors.sun,
     },
     error: {
-      main: frostedBlissColors.love,
+      main: railwayJourneyColors.accent,
     },
     warning: {
-      main: frostedBlissColors.gold,
+      main: railwayJourneyColors.warningOrange,
     },
     info: {
-      main: frostedBlissColors.iris,
+      main: railwayJourneyColors.infoBlue,
     },
     success: {
-      main: frostedBlissColors.highlightMed,
+      main: railwayJourneyColors.green,
     },
     text: {
-      primary: frostedBlissColors.text,
-      secondary: frostedBlissColors.subtle,
+      primary: railwayJourneyColors.text,
+      secondary: railwayJourneyColors.subtle,
     },
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Roboto", "Arial", sans-serif',
     h1: {
-      fontFamily: '"Playfair Display", serif',
+      fontFamily: '"Montserrat", sans-serif',
+      fontWeight: 600,
     },
     h2: {
-      fontFamily: '"Playfair Display", serif',
+      fontFamily: '"Montserrat", sans-serif',
+      fontWeight: 600,
     },
     h3: {
-      fontFamily: '"Playfair Display", serif',
+      fontFamily: '"Montserrat", sans-serif',
+      fontWeight: 500,
     },
     h4: {
-      fontFamily: '"Playfair Display", serif',
+      fontFamily: '"Montserrat", sans-serif',
+      fontWeight: 500,
     },
     h5: {
-      fontFamily: '"Playfair Display", serif',
+      fontFamily: '"Montserrat", sans-serif',
+      fontWeight: 400,
     },
     h6: {
-      fontFamily: '"Playfair Display", serif',
+      fontFamily: '"Montserrat", sans-serif',
+      fontWeight: 400,
     },
   },
   components: {
     MuiAppBar: {
       styleOverrides: {
         root: {
-          backgroundColor: frostedBlissColors.overlay,
+          backgroundColor: railwayJourneyColors.overlay,
+          boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
         },
       },
     },
@@ -88,10 +92,12 @@ const frostedBlissTheme = createTheme({
         root: {
           textTransform: 'capitalize',
           borderRadius: '8px',
-          backgroundColor: frostedBlissColors.highlightLow,
+          backgroundColor: railwayJourneyColors.accent,
           '&:hover': {
-            backgroundColor: frostedBlissColors.highlightMed,
+            backgroundColor: railwayJourneyColors.warningOrange,
           },
+          fontSize: '1rem',
+          fontWeight: 500,
         },
       },
     },
@@ -99,12 +105,25 @@ const frostedBlissTheme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: '12px',
-          backgroundColor: frostedBlissColors.surface,
-          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+          backgroundColor: railwayJourneyColors.surface,
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+          padding: '16px',
+        },
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          backgroundColor: railwayJourneyColors.track,
+          color: railwayJourneyColors.text,
+          fontWeight: 500,
+          '& .MuiChip-deleteIcon': {
+            color: railwayJourneyColors.accent,
+          },
         },
       },
     },
   },
 });
 
-export default frostedBlissTheme;
+export default railwayJourneyTheme;
