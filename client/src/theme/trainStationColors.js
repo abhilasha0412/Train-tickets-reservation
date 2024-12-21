@@ -11,7 +11,7 @@ const highContrastColors = {
   departure: '#FF0000', // Vibrant red for departures
   arrival: '#00FF00', // Bright green for arrivals
   warning: '#FFAA00', // Orange for warnings
-  info: '#E0115F', // Bright blue for information
+  info: '#E0115', // Bright blue for information
   success: '#00FFAA', // Teal for success
   buttonPrimary: '#E0115F', // Strong blue for primary actions
   buttonSecondary: '#FF5500', // Orange-red for secondary actions
