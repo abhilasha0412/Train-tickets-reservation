@@ -7,7 +7,7 @@ import { Button, Typography, Container, Grid, CircularProgress, Box } from '@mui
 
 import TicketCard from './TicketCard';
 
-function ShowTicketlist() {
+function ShowTicketList() {
   const [tickets, setTickets] = useState([]);
   const [loading, setLoading] = useState(true); // Loading state
 
@@ -66,4 +66,4 @@ function ShowTicketlist() {
   );
 }
 
-export default ShowTicketlist;
+export default ShowTicketList;

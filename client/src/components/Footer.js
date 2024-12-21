@@ -23,7 +23,7 @@ const Footer = () => (
         fontSize: '1.5rem',
       }}
     >
-      Created with passion and care by Abhilasha
+      Created with passion and care by Abhilasha❤️
     </Typography>
 
     <Typography
@@ -35,7 +35,7 @@ const Footer = () => (
         color: 'text.secondary',
       }}
     >
-      © {new Date().getFullYear()} Bsc Cohort | All Rights Reserved
+      © {new Date().getFullYear()} Abhilasha | All Rights Reserved
     </Typography>
 
     <Box sx={{ mt: 2 }}>
