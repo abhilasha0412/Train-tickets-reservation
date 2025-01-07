@@ -167,6 +167,7 @@ const HomePage = () => {
             </Button>
           </Grid>
 
+
           <Grid item xs={12} sm={6} md={4}>
             <Button
               component="a"
@@ -182,6 +183,7 @@ const HomePage = () => {
               GitHub
             </Button>
           </Grid>
+          
         </Grid>
       </Container>
     </Fade>

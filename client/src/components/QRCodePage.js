@@ -1,6 +1,6 @@
 // src/components/TrainTicketReservation.js
 import React, { useState, useEffect } from 'react';
-import { QRCodeSVG } from 'qrcode.react';
+import { QRCodeSVG } from 'QRCodePage.react';
 import {
   Container,
   Typography,

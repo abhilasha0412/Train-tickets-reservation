@@ -67,12 +67,12 @@ import Footer from './components/Footer';
 import CreateTicket from './components/CreateTicket';
 import ShowTicketList from './components/ShowTicketList';
 import ShowTicketDetails from './components/ShowTicketDetails';
-// import UpdateBookInfo from './components/UpdateBookInfo';
+import UpdateTicketinfo from './components/UpdateTicketinfo';
 import HomePage from './components/HomePage';
 // import NotesPage from './components/NotesPage'; // Import NotesPage component
 // import ExportPage from './components/ExportPage';
-// import QRCodePage from './components/QRCodePage';
-// import SearchBooks from './components/SearchBooks';
+import QRCodePage from './components/QRCodePage';
+import SearchTicket from './components/SearchTicket';
 
 import  highContrastColors from './theme/trainStationColors';
 
@@ -88,12 +88,12 @@ const App = () => {
               <Route exact path='/' element={<HomePage />} />
               <Route path='/ticket-list' element={<ShowTicketList />} />
               <Route path='/create-ticket' element={<CreateTicket />} />
-              {/* <Route path='/edit-book/:id' element={<UpdateBookInfo />} /> */}
+              <Route path='/edit-ticket/:id' element={<UpdateTicketinfo />} />
               <Route path='/show-ticket/:id' element={<ShowTicketDetails />} />
               {/* <Route path='/notes/*' element={<NotesPage />} />
-              <Route path="/export" element={<ExportPage />} />
+              <Route path="/export" element={<ExportPage />} /> */}
               <Route path="/qr-codes" element={<QRCodePage />} />
-              <Route path="/search" element={<SearchBooks />} /> */}
+              // <Route path="/search" element={<SearchTicket />} />
             </Routes>
           </Box>
           <Footer />
