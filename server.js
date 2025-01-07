@@ -6,7 +6,7 @@ require("dotenv").config( { path: "./config.env" } )
 
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
 // Connect to MongoDB
 connectDB();
@@ -33,8 +33,8 @@ app.get("*", function (_, res) {
 
 
 // START SERVER
-const port = process.env.PORT || 5000;
-app.listen(port, () => console.log(`Express server running on port ${port}`));
+// const port = process.env.PORT || 5001;
+//  app.listen(port, () => console.log(`Express server running on port ${port}`));
 
 // Start the server
 app.listen(PORT, () => {
